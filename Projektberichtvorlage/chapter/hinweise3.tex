@@ -1,0 +1,62 @@
+%Arik Messerman, September 2006, uidarikmesserman301174 003 0021
+%%% KAPITEL 5 ***
+\addcontentsline{toc}{chapter}{Hinweise 3}
+\chapter*{Hinweise 3}
+
+\section{LaTeX} \label{kap5}
+Hier noch mal einiges kurz zum Aufbau der Vorlage.
+\section{Bilder und Tabellen}
+Alle Bilder befinden sich im Unterordner \textit{figures}. Die typische Einbindung eines Bildes sieht wie folgt aus:\\
+\begin{verbatim}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/DAI.jpg}
+\caption{Hier ist ein Bild}
+\label{fig:dai}
+\end{figure}
+\end{verbatim}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/DAI.jpg}
+\caption{Hier ist ein Bild}
+\label{fig:dai}
+\end{figure}
+Auf diese Art und Weise eingefügte Bilder werden automatisch durch das Abbildungsverzeichnis referenziert. Analoges gilt auch für Tabellen:\\
+\begin{verbatim}
+\begin{table}[htb]
+\centering
+\begin{tabular}{r|rrr}
+
+           &          A &          B &          C \\
+\hline
+         1 &         a1 &         b1 &         c1 \\
+
+         2 &         a2 &         b2 &         c2 \\
+
+         3 &         a3 &         b3 &         c3 \\
+
+         4 &         a4 &         b4 &         c4 \\
+
+\end{tabular}
+\caption{Hier ist eine Tabelle}
+\label{tab:NochEineTabelle}  
+\end{table}
+\end{verbatim}
+\begin{table}[htb]
+\centering
+\begin{tabular}{r|rrr}
+
+           &          A &          B &          C \\
+\hline
+         1 &         a1 &         b1 &         c1 \\
+
+         2 &         a2 &         b2 &         c2 \\
+
+         3 &         a3 &         b3 &         c3 \\
+
+         4 &         a4 &         b4 &         c4 \\
+
+\end{tabular}
+\caption{Hier ist eine Tabelle}
+\label{tab:NochEineTabelle}  
+\end{table}

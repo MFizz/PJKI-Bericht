@@ -1,0 +1,133 @@
+9
+
+dir
+0
+http://edu.dai-labor.de/svn/lehre/edu/ss13/pj-ki/loa/svn/Projektberichtvorlage/chapter
+http://edu.dai-labor.de/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3ac0f2d0-af8f-4f2a-b8a1-46886e522246
+
+problem.tex
+file
+
+
+
+add
+
+einleitung.tex
+file
+
+
+
+add
+
+deckblatt.pdf
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+evaluierung.tex
+file
+
+
+
+add
+
+bibliography.bib
+file
+
+
+
+add
+
+hinweise.tex
+file
+
+
+
+add
+
+loesung.tex
+file
+
+
+
+add
+
+abkuerzung.tex
+file
+
+
+
+add
+
+anhanga.tex
+file
+
+
+
+add
+
+deckblatt.tex
+file
+
+
+
+add
+
+fazit.tex
+file
+
+
+
+add
+
+hinweise2.tex
+file
+
+
+
+add
+
+deckblatt.log
+file
+
+
+
+add
+
+hinweise3.tex
+file
+
+
+
+add
+

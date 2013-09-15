@@ -1,0 +1,161 @@
+%Arik Messerman, September 2006, uidarikmesserman301174 003 0021
+%%% HAUPTTEIL ***
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preämbel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper,titlepage,oneside,BCOR1cm]{report}
+
+\usepackage{ngerman} % neue deutsche Rechtschreibung
+\usepackage[latin9]{inputenc} % latin9-Kodierung für Umlaute (Erweiterung von latin1)
+\usepackage[T1]{fontenc} 
+% Sprachen:
+\usepackage[ngerman]{babel} % Silbentrennung Deutsch neue Rechtschreibung
+\selectlanguage{ngerman}
+
+\sloppy
+\usepackage{amsmath,marvosym} % Mathematik
+\usepackage{times}
+\usepackage{setspace} % 1,5 Zeilenabstand
+\onehalfspacing
+
+% Literatur
+\usepackage{bibgerm}
+\pagestyle{headings}
+\bibliographystyle{gerunsrt} % Literaturangaben nach Auftreten sortieren %{gerplain}
+\usepackage{sty/abbreviations}
+
+\usepackage{graphicx} % Bilder einfügen
+\usepackage{subfigure} % mehrere Abbildungen nebeneinander/übereinander
+% aller Bilder werden im Unterverzeichnis figures gesucht:
+\graphicspath{{figures/}}
+\usepackage{latexsym}
+
+\usepackage{fancyhdr} %Kopf- und Fußzeilen
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3} 
+
+% Hurenkinder- und Schusterjungenregelung
+\clubpenalty = 10000 % schliesst Schusterjungen aus
+\widowpenalty = 10000 % schliesst Hurenkinder aus
+
+\pagestyle{fancy}
+\pagestyle{headings}
+\usepackage{url, geometry, amssymb, graphicx, booktabs}
+
+% PDF
+\usepackage[colorlinks,pagebackref,pdfpagelabels]{hyperref} %Hyperlinks zw. Textstellen
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{color} % Farben
+\hypersetup{
+frenchlinks=false,
+colorlinks=false,
+bookmarksopen=true,
+bookmarksnumbered=true,
+pdftitle = {Seminararbeit},
+pdfsubject = {Seminararbeit},
+pdfauthor = {Arik Messerman},
+pdfkeywords = {uidarikmesserman301174 003 0021, arik messerman},
+pdfcreator = {Adobe-Acrobat-Distiller},
+pdfproducer = {LaTeX with hyperref and thumbpdf}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hier bitte Werte ändern %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\date{September 2006}
+\author{Arik Messerman}
+\title{Dokumentenvorlage für eine Seminararbeit} % Bitte unter chapter/deckblatt.tex ändern!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beginn des Dokumentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%\maketitle
+
+\pagenumbering{Roman} % Römische Aufzählung
+
+\input{chapter/deckblatt} % Titelseite
+\clearpage
+\chapter*{ }
+\clearpage
+
+
+\addcontentsline{toc}{chapter}{\numberline{}\contentsname} % Auch Inhaltsverzeichnis aufnehmen
+\tableofcontents % Inhaltsverzeichnis
+\clearpage
+
+\addcontentsline{toc}{chapter}{\numberline{}\listfigurename} % Auch Abbildungsverzeichnis aufnehmen
+\listoffigures % Abbildungsverzeichnis
+\clearpage
+
+% Tabellenverzeichnis
+\addcontentsline{toc}{chapter}{\numberline{}\listtablename} % Auch Tabellenverzeichnis aufnehmen
+\listoftables 
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Merke die römische Seitenzahl in 'roemisch'
+\newcounter{roemisch}
+\setcounter{roemisch}{\value{page}}
+\pagenumbering{arabic}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
+\fancyhead[LO]{}
+\fancyhead[RO]{\slshape \rightmark}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hauptteil (hier Änderungen vornehmen)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\input{chapter/hinweise}
+\phantomsection
+\input{chapter/hinweise2}
+\phantomsection
+\input{chapter/hinweise3}
+
+
+
+\input{chapter/einleitung}
+\input{chapter/problem}
+\input{chapter/loesung}
+\input{chapter/evaluierung}
+\input{chapter/fazit}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ende Hauptteil-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+% Setze Numerierung wieder auf römisch zurück und setzte von oben fort
+% Wert ist demnach der von 'roemisch'
+%\pagenumbering{Roman}
+%\setcounter{page}{\value{roemisch}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referenzen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{\numberline{}\bibname}
+\bibliography{chapter/bibliography} % Literaturverzeichnis
+
+
+
+\appendix % andere Aufzählung
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hier kommen die Anhänge %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapter/anhanga}
+
+\input{chapter/abkuerzung}
+
+
+\end{document}
+

@@ -1,0 +1,70 @@
+9
+
+dir
+0
+http://edu.dai-labor.de/svn/lehre/edu/ss13/pj-ki/loa/svn/Projektberichtvorlage
+http://edu.dai-labor.de/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3ac0f2d0-af8f-4f2a-b8a1-46886e522246
+
+sty
+dir
+
+
+
+add
+
+figures
+dir
+
+
+
+add
+
+DAI-projektabschlussbericht-vorlage.out
+file
+
+
+
+add
+
+chapter
+dir
+
+
+
+add
+
+DAI-projektabschlussbericht-vorlage.pdf
+file
+
+
+
+add
+
+DAI-projektabschlussbericht-vorlage.tex
+file
+
+
+
+add
+
